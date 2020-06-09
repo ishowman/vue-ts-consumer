@@ -17,7 +17,10 @@
     "paths": {
       "@/*": [
         "src/*"
-      ]
+      ],
+      // "vue-cookie-plugin": [
+      //   "/path/of/your/aa-vue-plugin/types/index"
+      // ]
     },
     "lib": [
       "esnext",

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
+    <img alt="Vue logo" src="./assets/logo.png" @click="open" />
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
   </div>
 </template>
@@ -14,7 +14,21 @@ import HelloWorld from "./components/HelloWorld.vue";
     HelloWorld
   }
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  open() {
+    this.$Pswp.open({
+      items: [
+        {
+          html: "<div style='color: #fff;'>hello vue-pswipe</div>"
+        }
+      ]
+    });
+    // get error tip when using local package
+    console.log(this.$AppName, this.$Version);
+    this.$JsCookie.set("year", "2020");
+    console.log(this.$JsCookie.get("year"));
+  }
+}
 </script>
 
 <style>

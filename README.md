@@ -1,5 +1,5 @@
 # vue-ts-master
-
+This is a project create by vue cli for test npm local package( config paths before you use local npm package)
 ## Project setup
 ```
 npm install
